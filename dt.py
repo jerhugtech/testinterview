@@ -6,5 +6,5 @@ with open(".\input.txt", "r") as f:
 
 file_name = str(content)    
 with open(".\output.txt", "w") as f:
-    f.write(file_name + '\n')
+    f.write(file_name)
     f.close()
