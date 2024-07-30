@@ -6,13 +6,10 @@ def is_valid_datetime(datetime_str):
   return re.match(pattern, datetime_str) is not None
 
 def read_datetime_values(file_path):
-  try:
-    with open(".\\input.txt", "r") as file:
-      datetime_values = file.read().splitlines()
-      return datetime_values
-  except FileNotFoundError:
-    print(f"File '{file_path}' not found.")
-    return []
+    with open(".\input.txt", "r") as file:
+        datetime_values = read_datetime_values(file_path)
+        print(datetime_values)  # Print the read values
+        return datetime_values
 
 def write_valid_datetime_values(datetime_values, output_file_path):
     valid_datetime_values = set()
